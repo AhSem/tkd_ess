@@ -1,0 +1,399 @@
+<AdminRoot>
+	orientation: 'vertical'
+
+	Label:
+		size_hint: (1, None)
+		text: 'SETTINGS'
+		text_size: self.size
+		halign: 'left'
+		valign: 'center'
+		height: 40
+		padding_x: 10
+		canvas.before:
+			Color: 
+				rgba: (0.5, 0.5, 0.5, 1)
+            Rectangle:
+            	pos: self.pos
+            	size: self.size
+
+	GridLayout:
+		cols: 3
+		rows: 1
+		size_hint: (1, None)
+		height: self.minimum_height
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Bout Number'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: '1'
+				size_hint: (.2, None)
+				height: 30
+			
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Category'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: 'A'
+				size_hint: (.2, None)
+				height: 30
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Weight (KG)'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: '49'
+				size_hint: (.2, None)
+				height: 30
+
+		# orientation: 'horizontal'
+		# size_hint_y: None
+		# height: self.height
+
+	GridLayout:
+		cols: 3
+		rows: 1
+		size_hint: (1, None)
+		height: self.minimum_height
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Number of rounds'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: '3'
+				size_hint: (.2, None)
+				height: 30
+			
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Round duration (seconds)'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: '120'
+				size_hint: (.2, None)
+				height: 30
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Rest duration (seconds)'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint: (.8, None)
+				height: 30
+				padding_x: 10
+			TextInput:
+				text: '30'
+				size_hint: (.2, None)
+				height: 30
+
+	GridLayout:
+		cols: 2
+		rows: 1
+		size_hint_y: None
+		height: self.minimum_height
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint_y: None
+			height: self.minimum_height
+			Label:
+				size_hint: (1, None)
+				text: 'CHUNG'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				height: 40
+				padding_x: 10
+				canvas.before:
+					Color: 
+						rgba: (0, 0, 1, 1)
+		            Rectangle:
+		            	pos: self.pos
+		            	size: self.size
+
+		    GridLayout:
+		    	cols: 1
+		    	rows: 4
+		    	size_hint: (1, None)
+		    	height: self.minimum_height
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Name'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		TextInput:
+		    			text: ''
+		    			hint_text: 'Name'
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Team'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		TextInput:
+		    			text: ''
+		    			hint_text: 'Team Name'
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Score'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		Label:
+		    			text: '0'
+		    			size_hint_x: .7
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+
+		    		Button:
+		    			text: '+'
+		    			size_hint_x: .1
+		    		Button:
+		    			text: '-'
+		    			size_hint_x: .1
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Penalty'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		Label:
+		    			text: '0'
+		    			size_hint_x: .7
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+
+		    		Button:
+		    			text: '+'
+		    			size_hint_x: .1
+		    		Button:
+		    			text: '-'
+		    			size_hint_x: .1
+
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint_y: None
+			height: self.minimum_height
+			Label:
+				size_hint: (1, None)
+				text: 'HONG'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				height: 40
+				padding_x: 10
+				canvas.before:
+					Color: 
+						rgba: (1, 0, 0, 1)
+		            Rectangle:
+		            	pos: self.pos
+		            	size: self.size
+
+		    GridLayout:
+		    	cols: 1
+		    	rows: 4
+		    	size_hint: (1, None)
+		    	height: self.minimum_height
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Name'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		TextInput:
+		    			text: ''
+		    			hint_text: 'Name'
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Team'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		TextInput:
+		    			text: ''
+		    			hint_text: 'Team Name'
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Score'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		Label:
+		    			text: '0'
+		    			size_hint_x: .7
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+
+		    		Button:
+		    			text: '+'
+		    			size_hint_x: .1
+		    		Button:
+		    			text: '-'
+		    			size_hint_x: .1
+
+		    	BoxLayout:
+		    		orientation: 'horizontal'
+		    		size_hint: (1, None)
+		    		height: 30
+		    		Label:
+		    			text: 'Penalty'
+		    			size_hint_x: .3
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+		    			padding_x: 10
+		    		Label:
+		    			text: '0'
+		    			size_hint_x: .7
+		    			text_size: self.size
+		    			halign: 'left'
+		    			valign: 'center'
+
+		    		Button:
+		    			text: '+'
+		    			size_hint_x: .1
+		    		Button:
+		    			text: '-'
+		    			size_hint_x: .1
+
+	Label:
+		size_hint: (1, None)
+		text: 'CONTROLS'
+		text_size: self.size
+		halign: 'left'
+		valign: 'center'
+		height: 40
+		padding_x: 10
+		canvas.before:
+			Color: 
+				rgba: (0, 1, 0, .8)
+            Rectangle:
+            	pos: self.pos
+            	size: self.size
+
+    GridLayout:
+    	cols: 2
+    	rows: 1
+
+    	BoxLayout:
+    		orientation: 'vertical'
+
+    		Label: 
+    			text: '0:00'
+    			font_size: '48px'
+    			size_hint_y: .6
+
+    		BoxLayout:
+    			orientation: 'horizontal'
+    			size_hint_y: .2
+    			Button:
+    				text: 'Start'
+    			Button:
+    				text: 'Pause'
+    			Button:
+    				text: 'Reset'
+
+    		BoxLayout:
+    			orientation: 'horizontal'
+    			size_hint_y: .2
+    			Label:
+    				text: 'Set Time'
+    			TextInput:
+    				text: '0:00'
+    			Label:
+    				text: 'Set Round'
+    			TextInput:
+    				text: '1'
+
+
+    	BoxLayout:
+    		orientation: 'vertical'
