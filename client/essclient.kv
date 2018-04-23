@@ -1,0 +1,35 @@
+#: kivy 1.10.0
+
+<ClientRoot>
+	orientation: 'vertical'
+	# ActionBar:
+	# 	pos_hint: {'top': 1}
+	# 	ActionView:
+	# 		use_separator: True
+	# 		ActionPrevious:
+	# 			with_previous: False
+	# 		ActionButton:
+	# 			text:'Settings'
+
+	BoxLayout:
+		orientation: 'horizontal'
+		
+		BoxLayout:
+			canvas.before:
+				Color:
+					rgba: (0, 0, 1, 1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			Label:
+				text: 'Blue'
+
+		BoxLayout:
+			canvas.before:
+				Color:
+					rgba: (1, 0, 0, 1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			Label:
+				text: 'Red'
