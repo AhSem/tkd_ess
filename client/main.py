@@ -7,8 +7,8 @@ gesture_strings = {
 	'sign': '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'
 }
 
+import pickle
 import socket
-import threading
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.uix.button import Button
@@ -76,9 +76,9 @@ class ClientRoot(BoxLayout):
 			match = gestures.find(gesture, minscore=0.70)
 			if match:
 				if touch.ud['gesture_path'][0][0] < Window.width/2 and touch.ud['gesture_path'][-1][0] < Window.width/2:	
-					self.score('Chung', match[1].name)
+					self.score('chung_score', match[1].name)
 				elif touch.ud['gesture_path'][0][0] > Window.width/2 and touch.ud['gesture_path'][-1][0] > Window.width/2: 
-					self.score('Hong', match[1].name)
+					self.score('hong_score', match[1].name)
 				else:
 					print("Invalid Gesture")
 				# print("{} happened".format(match[1].name))
@@ -89,9 +89,9 @@ class ClientRoot(BoxLayout):
 		super(ClientRoot, self).on_touch_up(touch)
 
 	def score(self, side, point):
-		message = side + '___' + str(point)
-		print('Send: ' + message)
-		self.s.send(message.encode("utf-8"))
+		message = {side: point}
+		print('Send: ' + str(message))
+		self.s.sendall(pickle.dumps(message))
 
 	def open_setting_modal(self):
 		self.popup.open()

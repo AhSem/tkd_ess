@@ -1,5 +1,18 @@
 <AdminRoot>
 	orientation: 'vertical'
+	chung_score: chung_score
+	chung_penalty: chung_penalty
+	hong_score: hong_score
+	hong_penalty: hong_penalty
+	time_counter: time_counter
+	rest_time_counter: rest_time_counter
+	time_set: time_set
+	rest_duration:rest_duration
+	round_total: round_total
+	round_number: round_number
+	server_host: server_host
+	server_port: server_port
+	connection_status: connection_status
 
 	Label:
 		size_hint: (1, None)
@@ -17,29 +30,14 @@
             	size: self.size
 
 	GridLayout:
-		cols: 3
+		cols: 2
 		rows: 1
 		size_hint: (1, None)
 		height: self.minimum_height
-		BoxLayout:
-			orientation: 'horizontal'
-			size_hint_y: None
-			height: 30
-			Label:
-				text: 'Bout Number'
-				text_size: self.size
-				halign: 'left'
-				valign: 'center'
-				size_hint: (.8, None)
-				height: 30
-				padding_x: 10
-			TextInput:
-				text: '1'
-				size_hint: (.2, None)
-				height: 30
 			
 		BoxLayout:
 			orientation: 'horizontal'
+			# size_hint: (.666, None)
 			size_hint_y: None
 			height: 30
 			Label:
@@ -47,34 +45,13 @@
 				text_size: self.size
 				halign: 'left'
 				valign: 'center'
-				size_hint: (.8, None)
+				size_hint: (.2, None)
 				height: 30
 				padding_x: 10
 			TextInput:
-				text: 'A'
-				size_hint: (.2, None)
-				height: 30
-
-		BoxLayout:
-			orientation: 'horizontal'
-			size_hint_y: None
-			height: 30
-			Label:
-				text: 'Weight (KG)'
-				text_size: self.size
-				halign: 'left'
-				valign: 'center'
 				size_hint: (.8, None)
 				height: 30
-				padding_x: 10
-			TextInput:
-				text: '49'
-				size_hint: (.2, None)
-				height: 30
-
-		# orientation: 'horizontal'
-		# size_hint_y: None
-		# height: self.height
+				on_text: root.update_category_name(self)
 
 	GridLayout:
 		cols: 3
@@ -83,10 +60,11 @@
 		height: self.minimum_height
 		BoxLayout:
 			orientation: 'horizontal'
+			# size_hint: (.334, None)
 			size_hint_y: None
 			height: 30
 			Label:
-				text: 'Number of rounds'
+				text: 'Match Number'
 				text_size: self.size
 				halign: 'left'
 				valign: 'center'
@@ -94,16 +72,16 @@
 				height: 30
 				padding_x: 10
 			TextInput:
-				text: '3'
 				size_hint: (.2, None)
 				height: 30
-			
+				on_text: root.update_match_number(self)
+
 		BoxLayout:
 			orientation: 'horizontal'
 			size_hint_y: None
 			height: 30
 			Label:
-				text: 'Round duration (seconds)'
+				text: 'Total Rounds'
 				text_size: self.size
 				halign: 'left'
 				valign: 'center'
@@ -111,9 +89,28 @@
 				height: 30
 				padding_x: 10
 			TextInput:
-				text: '120'
+				id: round_total
+				text: '3'
 				size_hint: (.2, None)
 				height: 30
+				on_text: root.update_total_round(self)
+			
+		# BoxLayout:
+		# 	orientation: 'horizontal'
+		# 	size_hint_y: None
+		# 	height: 30
+		# 	Label:
+		# 		text: 'Round duration (seconds)'
+		# 		text_size: self.size
+		# 		halign: 'left'
+		# 		valign: 'center'
+		# 		size_hint: (.8, None)
+		# 		height: 30
+		# 		padding_x: 10
+		# 	TextInput:
+		# 		size_hint: (.2, None)
+		# 		height: 30
+		# 		on_text: root.update_round_duration(self)
 
 		BoxLayout:
 			orientation: 'horizontal'
@@ -128,9 +125,10 @@
 				height: 30
 				padding_x: 10
 			TextInput:
-				text: '30'
+				id: rest_duration
 				size_hint: (.2, None)
 				height: 30
+				# on_text: root.update_rest_duration(self)
 
 	GridLayout:
 		cols: 2
@@ -175,6 +173,7 @@
 		    		TextInput:
 		    			text: ''
 		    			hint_text: 'Name'
+		    			on_text: root.update_chung_name(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -190,6 +189,7 @@
 		    		TextInput:
 		    			text: ''
 		    			hint_text: 'Team Name'
+		    			on_text: root.update_chung_team(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -203,7 +203,7 @@
 		    			valign: 'center'
 		    			padding_x: 10
 		    		Label:
-		    			text: '0'
+		    			id: chung_score
 		    			size_hint_x: .7
 		    			text_size: self.size
 		    			halign: 'left'
@@ -212,9 +212,11 @@
 		    		Button:
 		    			text: '+'
 		    			size_hint_x: .1
+		    			on_press: root.add_chung_score(self)
 		    		Button:
 		    			text: '-'
 		    			size_hint_x: .1
+		    			on_press: root.minus_chung_score(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -228,7 +230,7 @@
 		    			valign: 'center'
 		    			padding_x: 10
 		    		Label:
-		    			text: '0'
+		    			id: chung_penalty
 		    			size_hint_x: .7
 		    			text_size: self.size
 		    			halign: 'left'
@@ -237,9 +239,11 @@
 		    		Button:
 		    			text: '+'
 		    			size_hint_x: .1
+		    			on_press: root.add_chung_penalty(self)
 		    		Button:
 		    			text: '-'
 		    			size_hint_x: .1
+		    			on_press: root.minus_chung_penalty(self)
 
 		BoxLayout:
 			orientation: 'vertical'
@@ -279,6 +283,7 @@
 		    		TextInput:
 		    			text: ''
 		    			hint_text: 'Name'
+		    			on_text: root.update_hong_name(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -294,6 +299,7 @@
 		    		TextInput:
 		    			text: ''
 		    			hint_text: 'Team Name'
+		    			on_text: root.update_hong_team(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -307,7 +313,7 @@
 		    			valign: 'center'
 		    			padding_x: 10
 		    		Label:
-		    			text: '0'
+		    			id: hong_score
 		    			size_hint_x: .7
 		    			text_size: self.size
 		    			halign: 'left'
@@ -316,9 +322,11 @@
 		    		Button:
 		    			text: '+'
 		    			size_hint_x: .1
+		    			on_press: root.add_hong_score(self)
 		    		Button:
 		    			text: '-'
 		    			size_hint_x: .1
+		    			on_press: root.minus_hong_score(self)
 
 		    	BoxLayout:
 		    		orientation: 'horizontal'
@@ -332,7 +340,7 @@
 		    			valign: 'center'
 		    			padding_x: 10
 		    		Label:
-		    			text: '0'
+		    			id: hong_penalty
 		    			size_hint_x: .7
 		    			text_size: self.size
 		    			halign: 'left'
@@ -341,9 +349,11 @@
 		    		Button:
 		    			text: '+'
 		    			size_hint_x: .1
+		    			on_press: root.add_hong_penalty(self)
 		    		Button:
 		    			text: '-'
 		    			size_hint_x: .1
+		    			on_press: root.minus_hong_penalty(self)
 
 	Label:
 		size_hint: (1, None)
@@ -368,32 +378,77 @@
     		orientation: 'vertical'
 
     		Label: 
-    			text: '0:00'
+    			id: time_counter
+    			text: '00:00'
     			font_size: '48px'
-    			size_hint_y: .6
+    			size_hint_y: .4
+
+    		Label: 
+    			id: rest_time_counter
+    			text: '00:00'
+    			font_size: '36px'
+    			size_hint_y: .2
+    			color: (1, 1, 0, 1)
+
+    		Label: 
+    			id: round_number
+    			text: '1'
+    			font_size: '24px'
+    			size_hint_y: .2
 
     		BoxLayout:
     			orientation: 'horizontal'
-    			size_hint_y: .2
+    			size_hint_y: .1
     			Button:
     				text: 'Start'
+    				on_press: root.start_countdown(self)
     			Button:
     				text: 'Pause'
+    				on_press: root.pause_countdown(self)
     			Button:
     				text: 'Reset'
+    				on_press: root.reset_countdown(self)
 
     		BoxLayout:
     			orientation: 'horizontal'
-    			size_hint_y: .2
+    			size_hint_y: .1
     			Label:
     				text: 'Set Time'
     			TextInput:
+    				id: time_set
     				text: '0:00'
+    				on_text: root.set_time(self)
     			Label:
     				text: 'Set Round'
     			TextInput:
     				text: '1'
+    				on_text: root.set_round(self)
 
 
     	BoxLayout:
     		orientation: 'vertical'
+			Label:
+				text: 'Server I.P. Address:'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+			TextInput:
+				id: server_host
+				text_hint: '127.0.0.1'
+			Label:
+				text: 'Server Port:'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+			TextInput:
+				id: server_port
+				text_hint: '5010'
+				input_type: 'number'
+			Label:
+				id: connection_status
+				text: 'Disconnected'
+				font_size: '24px'
+				color: (1, 0, 0, 1)
+			Button:
+				text: 'Connect'
+				on_press: root.connect_to_server()

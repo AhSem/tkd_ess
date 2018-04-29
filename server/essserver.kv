@@ -1,15 +1,27 @@
 #: kivy 1.10.0
-
 <ServerRoot>
 	orientation: 'vertical'
+	match_number: match_number
+	category_name: category_name
+
+	chung_name: chung_name
+	chung_score: chung_score
+	chung_penalty: chung_penalty
+
+	hong_name: hong_name
+	hong_score: hong_score
+	hong_penalty: hong_penalty
+
+	time_counter: time_counter
 
 	GridLayout:
-		cols: 3
+		cols: 2
 		rows: 1
 		size_hint_y: None
 		height: '50px'
 		Label:
-			text: 'Match 1'
+			id: match_number
+			text: 'Match '
 			text_size: self.size
 			font_size: '24px'
 			halign: 'left'
@@ -17,20 +29,13 @@
 			padding_x: '10px'
 
 		Label:
-			text: 'Category A'
-			text_size: self.size
-			font_size: '24px'
-			halign: 'center'
-			valign: 'center'
-
-		Label:
-			text: 'Below 54 Kg'
+			id: category_name
+			text: 'Category '
 			text_size: self.size
 			font_size: '24px'
 			halign: 'right'
 			valign: 'center'
 			padding_x: '10px'
-
 
 	Widget:
         size_hint_y: None
@@ -47,20 +52,36 @@
 		rows: 1
 
 		BoxLayout:
+			size_hint_x: .4
 			orientation: 'vertical'
 
 			Label:
-				text: 'Aaron Cook'
+				id: chung_name
+				font_size: '24px'
+				size_hint_y: None
+				height: '50px'
 
 			Label:
+				id: chung_score
 				text: '0'
+				font_size: '96px'
+		        canvas.before:
+		            Color:
+		                rgb: 0, 0, 1.
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size
 
 			Label:
-				text: 'Kyongo: 0'
+				id: chung_penalty
+				text: '0'
+				font_size: '24px'
+				size_hint_y: None
+				height: '50px'
 
 		Widget:
 	        size_hint_x: None
-	        width: 6
+	        width: 2
 	        canvas:
 	            Color:
 	                rgb: 1., 1., 1.
@@ -70,16 +91,32 @@
 
 		BoxLayout:
 			orientation: 'vertical'
+			size_hint_x: .2
 
 			Label:
 				text: '0:00'
+				id: time_counter
+				font_size: '48px'
+				bold: True
+				color: (1, 1, 0, 1)
 
 			Label:
 				text: 'R 1'
+				font_size: '48px'
+				bold: True
+				color: (0, 0, 0, 1)
+				size_hint_y: None
+				height: '50px'
+				canvas.before:
+					Color:
+						rgb: (1, 1, 1)
+					Rectangle:
+						pos: self.pos
+						size: self.size
 
 		Widget:
 	        size_hint_x: None
-	        width: 6
+	        width: 2
 	        canvas:
 	            Color:
 	                rgb: 1., 1., 1.
@@ -89,13 +126,29 @@
 	                
 		BoxLayout:
 			orientation: 'vertical'
+			size_hint_x: .4
 
 			Label:
-				text: 'Aaron Cook'
+				id: hong_name
+				font_size: '24px'
+				size_hint_y: None
+				height: '50px'
 
 			Label:
+				id: hong_score
 				text: '0'
+				font_size: '96px'
+		        canvas.before:
+		            Color:
+		                rgb: 1, 0, 0
+		            Rectangle:
+		                pos: self.pos
+		                size: self.size
 
 			Label:
-				text: 'Kyongo: 0'
+				id: hong_penalty
+				text: '0'
+				font_size: '24px'
+				size_hint_y: None
+				height: '50px'
 
