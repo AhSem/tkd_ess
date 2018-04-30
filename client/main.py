@@ -4,13 +4,13 @@ gesture_strings = {
 	'3': 'eNp9lHtQVFUYwBfBB2hK+cRUVkxdSxEyCnzERZGbYbqK2qJtPK8s7bK73z541YnFB2UqItlblMzJahSJUct8LKCpKM0wZpnjay1tJntR49hrGvvumfPt3Fmc9o+7d3/7O+d8r3t94QXW4tKK+CLF7fG6lChZfINuUjWEMehlMPXW6XRlxYUeC4TLUrYPf+kiTH3walGKiyweiJClolaV6kyD8CJ2ynG6HIXeAg/0lqXBM5NObL8Wa+qLf7s9LodVcUMfM/S969FZXIiCfhhAJIMoAz/L6Si2e9zQ3wwDDHddZlSFKLgHVw1kMMhgCsNV5RAt+7tu7+k4P7yTgwq4V069HJc17v3idG++RbXvYzDYYEGv43xnG2uSLGhcZb/rb9XeEsYQBkO54a/Y510Vo1eNgLTo34aF9cIYxmA4N7Zej/2nfQnfI/D6xoycJbeFMYJBjGqkvtqQ/FvuPl1PYySD+7mx12z/MLGltacxisFobvgvnPvzr0v6nsYYBrHc6FixEvav6e6Zi57BWG6c7ns5PGUTP+Vix0rdtqzdwohjMI4bp5p+DSRWJqjG14d+OiL1OieMBxiM58bnxu39GtKNqnF2+c3+yuFTwpjAYGJopGdk09j6b5uFYWAwiRsHrNnhbXN5xY5dSQ18bxshjAcZPBRaj6MLwju3pBmFMZnBFG5scPc77TvEa9oyZc/mzCq9MOIZTOV9aWqYsmP25IBq+IZUFWVd9wkjgUEiNw70T/bNW6Vm6/elHbpmH6sTxsMMpnGjbehJc0ecmot/54wNWw+vJ+MRBkncaN61+takyWoc/pZpS/W1J7qE8SiDx7hRP+rAd9UfcOOTNyJ37x0dLYxkBik8l13y1fNhiT7VaJuakl92vVUY0xnM4MZnpXrbhbVqLv4T9T//8uYMimMmg1ncaN92vH1jDM/lzO0dlZ9uThbG4wxSuXF8p6EsJqVONbqWdU//yG4ShsQgjRvH/vj4xmvxzarx1cD4pIyDncKYzWAON45M/Lvlh2YexzfD5hwfcXO+MNIZzOXGtsIdke/m8lwujsle/ONIqkcGA5nXY50roqn9PV6Pi54t7+zRJwjjCQbzuLGvJdOcZmtUjUtfVB/dn0T1eJJBZshz678ywX7tSCbNx3wGT/2/sYDBQm58uXj+yfGz1nDj7A132rIh3nzFNEB9XxW4FMUuXj9GMywyyJInwF93slTBv8NqYLEWRvObGsiSJW80wQQBlyDMJWgUcCnCRoJOAZfJUmkdwUYBn5alsmaCrQKaZKlcCoXZCFtD4XK894XCFXjfzRPRwGdkqVIKPd2MMDc0zmcROmm5JGCOBpb776ifGsjVQp8w8xAaxZ5lXQLmI9QTzBWwAKGOoE7AQk1GpXrRDiXYBSwsxblSUxAvNa4IYYKAHoeI04L7dxOkxhUjpDjdzQI+F4wEIWVkxUioR24qiA2hk6BewBKEwT1pbOwa6LojQnIgpDRd3cJ0ImwMhYAhUeNc1E1XsLYIKU435k5VclGVPAhp6lxUZC9CGm+gHpUG242Q9iwLDgZCGu/y4FwhpD0rNNBJwVcivMpTRkjBP6+ZT2edgC9oIQXPtNAoWvyiBjqonlVaGBCmT3O6g6auWhOng4JfhTBHmHZq8WrN1JUEBFyDpaNHpiRWnL4W20H1LKFRrEFIy21Uz5c0LwFbjlj+suZ1YaWM1iGkR8ZKGb2CA0ztsFI91yOUQuEGhPpQuBFhdCisVbz5eaZIvPc4bIorz16gwCY59eBb6udtUwT+Yc8rUaDOpPqw2Zsf/x9Xl0/E',
 	'4': 'eNp9lXtQVGUUwFcQUfJB4oNIgbLHIrqYldlDuWpyMzNBtFaBWHa5sLx29+wDwfgQfKxSytqkmY2Jj2aYxjEnzRHRcVexEodSmxwZeyH94diTmqksnKHv+ziHubMy3j92l9/9ne+c73znXuoibWUlldWmYs3j9bm1GBW/wZBSD0MYRBjNUQaDYXVJodcOkapiDRnEZR7GP+xaSbHdC0NVxaX00zH8A1fKd7mdhT6bF6JUZdiK1uWNMNEczW97vG5nmeaBYXkQPWjqbCnEwHBewAgGMUaZy+UscXg9cE8ejDQOGpYphBgYxaNGMxhjNA/hUVUQqwaPBHKNf53dK0E13Kumd0/YvrumN9JntQt7LIM4o517QaEFXHZudCX6EjZ8U4/GOAbjpdG2J7v2sj8kjG9HNSvXvKPRmMBgojQ6bt00TptkF8aVlNn//h11AY14Bvfd3UhgcL80vvrpZNWGFfHCuBDniDwUvRuNSQwm391IZJAkjSuW7mv/1VQJo3Xr/IqQ7100khk80G98LxbJFcYnH/x4o3NiPBoPMpgSbgTmhlo6VyloPMTgYWlcPtz8+aJ5Yi/B5iPqH4uv70XjEQaP9u92zXX1o3GbhXH0xH6D39GJhpFBijTO8G7k5JuF0bonVi39LhaNqQxSpfHhkt6MhPOKME69k9ZuvU1ZpjGYLox09+TfDh7fZLjTMDFIk8axiylBe9sga8xg8Jg0Th88vnlhVuydxkwGj0vj/MySLX2zMoVx7OMz62obzWg8weBJaXyxO8SdHmEcODv815z929CYxeApaXyZcH7sje2doqdNltzy6SkWNGYzeLp/jcSWrJ83yrM9vituakcGZXmGwbPSaDdV846IStPbDkW/n7FvGhrPMZgjjXPzpzaM/kdUmt6+o2iKqe8cGnMZpEujVQzQWLnG2Zm/93Y00AQpDOZJo6VtZUTun3XCONmwzHRqI9Uxn8GCsJ6mvx0Qu6H5eJ7BQmkcvRozx3VAPC/Bfe03y2zrk9HIYKCGG6cbly7OmUTGCwwWhRvtSZ+m+VNpkl9ksDj8bC/6U3f88tZtNF5isCRsL8GvDxcGund+hsbLDJZK4wRfYWWEPNur3Tvbxl+45bNq5pHifWVza5oDXz+ZeZBlVBVf/0tQVaouyR9+WMbhtnCYzWEmwUyEy1XF24NwNZkrOHQhrAwhfEVVPGRWJovvIX54lUMFoc+A0KwqbjK9FgxfyWEyQrzrh1WqApcIKghzOKxDCFRnLv9tQeii8Dw9XNsnLj+8poe0Zr4OOmlHFg6pS07aUQGvJBahg8KtHFJDKoKYyMb3Tv0sJ1jI4V6C+Qg13gc6o7IuTFREbRSwCc1ifgqGcGgfOC8dLOGwKxyWqsoaCi+vw+LLOKTwCjqjcg4Pyyi+TQOaFXpI/XRwSMU7KZFTB13UOpceUpOBQ2oIJCN0c0hjAyEM93A4MCFJmMirKtVNWJKb1vRxSBPipn5WcjgDoScWzdUcJmG4h7JX8db1hI9iNYcDdfbgmms4HBhFmuTXdcfhpOw1HFJ2BxXPdLCMwmt1sJRat1YH7V1o1umhgma9LnsxwXU6WEQlreeQZl6jJm/Q7aiQhnYjh/QgFFKX/DpoI7hJ1yUrDcNmPaQdNXBIw1DwA5pv6CEN2Jt6SE/cFj2kNbdqPmuBeQT/w+ss19wFDpsGjfxtuUtc75mH8huOggoNAmYRAPzfnel/nNl3jQ==',
 	'5': 'eNp9lXtQlFUUwHcRUMASNUkJBU1lVaINKQhNPgv9MokIUrdsgwVWdlvc3bMPWB63VkQm1ElGUxOdaRnNcUJl8YGR6MLQANkLGBweqWDlX9UMTU6ZPeh+l3OZbXH4/ti989vfueeec+5865ySa9AXFsfma602u0UbLOI3yJbtADkBP4UqQCaTFenzbDqYIgr5wzLpUQXSD51Wn6+zgb8o6D2j9PlXNYNS3CnLbDHl2XNtECAK82LL1/9SkaGaSn+22iwmg9YKgWqY+sDUmUwIhmn0AEEEghUsl9mkN9qsEKKG6YoHhqVLQjA8RKMeJjBDoZLTKAeEiskDTWHtmXcKGCiGmWLy7VB3RP6ZY/YcnWTPIjBboaNeV/7Mrzsb43UTjEcIzGHGtcN2V9Uf7000wgg8yowr+zdHfb7NLBnDrdF6W/jfaMwlMI8ZDYvvL79Y1sKMDYPqQI8/GuEEHmPG/luOnppUp2QMBQat2ujqRSOCwHzJ8DSc7I0crJNJxo2qtuP1IRfQWEAgkhkd8+8nNJy9Jxl9a+tby9O60IgisHByYxGBx5nxZZFNPuU8M7o/mR2jGU1BYzGBJcy41p9zNOL9U5JxrTauPfLuh2gsJRDNDE9Gxu1LQ0rJuPrDbwlX60LRUBBYxoyLmtU71+12S0bTT7ppu5zDaCwnsIL1w3Tys+hCI6v2jEPdXNWWjUYMgSeYcUp18/d7HzOjNkTeXjLA94gl8CQz2lobk4+qddTw7FvTf2jPHScaSgJP+czWU9vyVcWcNBkacQRWMqP77pXU3QfyJONcd5mr7C++RzyBp5nR27LncPjlGMm4XGFeuTDAjMYzBBKYcT3r2D/y4QLJ6Dif5vDrS0QjkcCzY3uA34/Rir2S0dUTZ0g6yGtJIrCKGT0HvjkHn56WjOsrTsfvrelHYzWB55jRUbbgeCBdUmPQ2hLWtKUZjTUEksf6sejEwIVEZnw3ixZD+C0UCKxlxqWtp5Y0/1otGTfkhoOl8SNoPE/gBTa5uv4+x9AhFzNGAs5u+vkGGikE1jHji5rkb9NS5krGzVsfdShPdKKxnoA4ufEigQ3M6F56xP1n9LSJxksENjJjIKn0ZmOIe6KRSuDlyY00Aq8w41b5Ps/3nR/8z9Cqpkvvq1yLVmvE10+6Gl5ViAIZewmKQnGk9N4brYQMClt8YSaFTl/4miiUseWoF9xEIRPlXnCzKJRm+4ZvEYUSJTfHQipBRdfVaDq62KISXqfrEQ6dCN8QhaIuDmUIt1KoRFjkQvimKBTy7IUjCNV0HcphNsK3RMHOE9l59ixvWI0w2xsKCDXeMAphDt1fhtDGs+dSKHDIz5nndU6bCbukpYVEIbTyI20br47CamxdPu0DH5xlFMN1tJ/pHLoxXE87X4+Ds4QifNtrRsATGeg0eTikIyygkF8b8zDC7V6XwcwrMnpDJUKTFzS1IDR7QSMPBwq78IZs92BFFgrdmL2AQyuFZoQGXruNVsTHYeA3xE4hn7t+CM1C2hDeTz3PXkRbN4RH0vMRO8YvmyjoeO3FdHB8Rjp+P0vGL4YXLKXzcvnCMgplvpDQ0VT7wncoVPrCdymckN1J4YQ9d9AhjvjCcq09R6MKomubqUBr0RhztbCT/oMdkZ4alT/9wajZroUKleTDLntO7H+20Fkn',
-	'sign': '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'
 }
 
 import pickle
 import socket
 from kivy.app import App
 from kivy.core.window import Window
+from kivy.properties import ObjectProperty
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
@@ -27,38 +27,35 @@ for name, gesture_string in gesture_strings.items():
 
 class SettingPopup(Popup):
 
+	connection_status = ObjectProperty()
+
 	def __init__(self, arg):
 		super(SettingPopup, self).__init__()
-		self.arg = arg
-		self.title = 'Settings'
-		body = BoxLayout(orientation='vertical')
-		host_input = TextInput(hint_text='127.0.0.1')
-		host_input.bind(text=self.on_host_changed)
-		port_input = TextInput(hint_text='5010')
-		port_input.bind(text=self.on_port_changed)
-		body.add_widget(host_input)
-		body.add_widget(port_input)
-		btn_ok = Button(text='OK')
-		btn_ok.bind(on_press=self.dismiss)
-		body.add_widget(btn_ok)
-		self.content = body
 
-	def on_host_changed(self, instance, value):
-		self.host = value
+	def on_host_changed(self, textinput):
+		self.host = textinput.text
 		
-	def on_port_changed(self, instance, value):
-		self.port = value
+	def on_port_changed(self, textinput):
+		self.port = textinput.text
+
+	def on_connect_btn_pressed(self, button):
+		app = App.get_running_app()
+		app.root.try_connect()
+
+	def on_close_btn_pressed(self, button):
+		self.dismiss()
 
 
 class ClientRoot(BoxLayout):
 
+	action_bar_title = ObjectProperty()
+	chung_score = ObjectProperty()
+	hong_score = ObjectProperty()
+
 	def __init__(self, **kwargs):
 		super(ClientRoot, self).__init__(**kwargs)
-		self.server = None
 		self.s = socket.socket()
 		self.popup = SettingPopup(self)
-		self.popup.bind(on_dismiss=self.try_connect)
-
 
 	def on_touch_down(self, touch):
 		touch.ud['gesture_path'] = [(touch.x, touch.y)]
@@ -73,35 +70,38 @@ class ClientRoot(BoxLayout):
 			gesture= Gesture()
 			gesture.add_stroke(touch.ud['gesture_path'])
 			gesture.normalize()
-			match = gestures.find(gesture, minscore=0.70)
+			match = gestures.find(gesture, minscore=0.80)
 			if match:
 				if touch.ud['gesture_path'][0][0] < Window.width/2 and touch.ud['gesture_path'][-1][0] < Window.width/2:	
+					self.chung_score.text = match[1].name
 					self.score('chung_score', match[1].name)
 				elif touch.ud['gesture_path'][0][0] > Window.width/2 and touch.ud['gesture_path'][-1][0] > Window.width/2: 
+					self.hong_score.text = match[1].name
 					self.score('hong_score', match[1].name)
 				else:
 					print("Invalid Gesture")
-				# print("{} happened".format(match[1].name))
-
-				if match[1].name == 'sign':
-					self.open_setting_modal()
 
 		super(ClientRoot, self).on_touch_up(touch)
 
 	def score(self, side, point):
 		message = {side: point}
-		print('Send: ' + str(message))
-		self.s.sendall(pickle.dumps(message))
+		print('Sending: ', message)
+		try:
+			self.s.sendall(pickle.dumps(message))
+		except:
+			pass
 
 	def open_setting_modal(self):
 		self.popup.open()
 
 	def try_connect(self, *args):
 		try:
-			print((self.popup.host, int(self.popup.port)))
-			self.s.connect((self.popup.host, int(self.popup.port)))
+			server = (self.popup.host, int(self.popup.port))
+			print('Connecting to ', server)
+			self.s.connect(server)
+			self.action_bar_title.title = self.popup.connection_status.text = 'Connected'
 		except:
-			print('Connection fails.')
+			pass
 
 
 class EssClient(App):

@@ -1,15 +1,22 @@
 #: kivy 1.10.0
 
 <ClientRoot>
+	action_bar_title: action_bar_title
+	chung_score: chung_score
+	hong_score: hong_score
+
 	orientation: 'vertical'
-	# ActionBar:
-	# 	pos_hint: {'top': 1}
-	# 	ActionView:
-	# 		use_separator: True
-	# 		ActionPrevious:
-	# 			with_previous: False
-	# 		ActionButton:
-	# 			text:'Settings'
+	ActionBar:
+		pos_hint: {'top': 1}
+		ActionView:
+			use_separator: True
+			ActionPrevious:
+				id: action_bar_title
+				title: 'Disconnected'
+				with_previous: False
+			ActionButton:
+				text:'Settings'
+				on_press: root.open_setting_modal()
 
 	BoxLayout:
 		orientation: 'horizontal'
@@ -22,7 +29,8 @@
 					pos: self.pos
 					size: self.size
 			Label:
-				text: 'Blue'
+				id: chung_score
+				font_size: '24px'
 
 		BoxLayout:
 			canvas.before:
@@ -32,4 +40,60 @@
 					pos: self.pos
 					size: self.size
 			Label:
-				text: 'Red'
+				id: hong_score
+				font_size: '24px'
+
+
+<SettingPopup>
+	connection_status: connection_status
+	title: 'Settings'
+	BoxLayout:
+		orientation: 'vertical'
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Host I.P.'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint_x: .2
+			TextInput:
+				on_text: root.on_host_changed(self)
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 30
+			Label:
+				text: 'Port'
+				text_size: self.size
+				halign: 'left'
+				valign: 'center'
+				size_hint_x: .2
+			TextInput:
+				on_text: root.on_port_changed(self)
+
+
+		Widget:
+
+		Label:
+			id: connection_status
+			text:'Disconnected'
+
+		Widget:
+
+		BoxLayout:
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: 50
+
+			Button:
+				text: 'Connect'
+				on_press: root.on_connect_btn_pressed(self)
+			Button:
+				text: 'Close'
+				on_press: root.on_close_btn_pressed(self)
+
