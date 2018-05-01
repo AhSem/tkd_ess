@@ -1,4 +1,4 @@
-import pickle
+import collections, pickle
 import socket
 import _thread
 
@@ -25,7 +25,9 @@ class ServerRoot(BoxLayout):
 	"""docstring for ServerRoot"""
 	def __init__(self, **kwargs):
 		super(ServerRoot, self).__init__(**kwargs)
+		self.chung_temp_score, self.hong_temp_score = [], []
 		self.t = _thread.start_new_thread(self.start_socket_connection, ('127.0.0.1', 5010))
+		self.t2 = _thread.start_new_thread(self.score_tracker, ())
 
 	def start_socket_connection(self, host, port):
 		print("Starting up socket connection...")
@@ -92,7 +94,24 @@ class ServerRoot(BoxLayout):
 				elif key == 'update_time_counter':
 					self.time_counter.text = str(d[key])
 
+				elif key == 'chung_score':
+					self.chung_temp_score.append(d[key])
+
+				elif key == 'hong_score':
+					self.hong_temp_score.append(d[key])
+
 		c.close()
+
+	def score_tracker(self):
+		while True:
+			c_s = [item for item, count in collections.Counter(self.chung_temp_score).items() if count > 1]
+			h_s = [item for item, count in collections.Counter(self.hong_temp_score).items() if count > 1]
+			if len(c_s) > 0:
+				print('Chung scores ', c_s[0])
+				del self.chung_temp_score[:]
+			if len(h_s) > 0:
+				print('Hong scores ', h_s[0])
+				del self.chung_temp_score[:]
 
 
 
