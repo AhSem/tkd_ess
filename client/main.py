@@ -89,7 +89,7 @@ class ClientRoot(BoxLayout):
 		try:
 			self.s.sendall(pickle.dumps(message))
 		except:
-			pass
+			self.action_bar_title.title = self.popup.connection_status.text = 'Disconnected'
 
 	def open_setting_modal(self):
 		self.popup.open()
@@ -101,7 +101,7 @@ class ClientRoot(BoxLayout):
 			self.s.connect(server)
 			self.action_bar_title.title = self.popup.connection_status.text = 'Connected'
 		except:
-			pass
+			self.action_bar_title.title = self.popup.connection_status.text = 'Disconnected'
 
 
 class EssClient(App):
