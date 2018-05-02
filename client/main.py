@@ -54,7 +54,6 @@ class ClientRoot(BoxLayout):
 
 	def __init__(self, **kwargs):
 		super(ClientRoot, self).__init__(**kwargs)
-		self.s = socket.socket()
 		self.popup = SettingPopup(self)
 
 	def on_touch_down(self, touch):
@@ -97,7 +96,7 @@ class ClientRoot(BoxLayout):
 	def try_connect(self, *args):
 		try:
 			server = (self.popup.host, int(self.popup.port))
-			print('Connecting to ', server)
+			self.s = socket.socket()
 			self.s.connect(server)
 			self.action_bar_title.title = self.popup.connection_status.text = 'Connected'
 		except:
