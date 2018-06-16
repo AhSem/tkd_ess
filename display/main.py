@@ -4,7 +4,7 @@ from kivy.app import App
 from kivy.properties import ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 
-class ServerRoot(BoxLayout):
+class DisplayRoot(BoxLayout):
 	match_number = ObjectProperty()
 	category_name = ObjectProperty()
 
@@ -18,30 +18,88 @@ class ServerRoot(BoxLayout):
 
 	time_counter = ObjectProperty()
 
-	"""docstring for ServerRoot"""
 	def __init__(self, **kwargs):
-		super(ServerRoot, self).__init__(**kwargs)
+		super(DisplayRoot, self).__init__(**kwargs)
 		self.chung_temp_score, self.hong_temp_score = [], []
-		
-		with open("server.txt") as f:
-			server = f.read().split()
 
-		self.t = _thread.start_new_thread(self.start_socket_connection, (server[0], int(server[1])))
-		self.t2 = _thread.start_new_thread(self.score_tracker, ())
-		self.t3 = _thread.start_new_thread(self.chung_temp_score_resetter, ())
-		self.t4 = _thread.start_new_thread(self.hong_temp_score_resetter, ())
+		with open("server.txt") as f:
+			self.server = f.read().split()
+
+		self.t = _thread.start_new_thread(self.try_connect, ())
+		# self.t = _thread.start_new_thread(self.start_socket_connection, (server[0], int(server[1])))
+		# self.t2 = _thread.start_new_thread(self.score_tracker, ())
+		# self.t3 = _thread.start_new_thread(self.chung_temp_score_resetter, ())
+		# self.t4 = _thread.start_new_thread(self.hong_temp_score_resetter, ())
+
+	def try_connect(self):
+		try:
+			client_socket = socket.socket()
+			client_socket.connect(self.server[0], int(self.server[1]))
+
+			while True:
+				data = client_socket.recv(512)
+				if not data:
+	   				break
+				elif data == 'quit':
+					break
+				else:
+		   			d = pickle.loads(data)
+		   			print("Received: " + str(d))
+
+		   			for key in d:
+		   				if key == 'update_match_number':
+		   					self.match_number.text='Match ' + d[key]
+
+		   				elif key == 'update_category_name':
+		   					self.category_name.text = 'Category ' + d[key]
+
+		   				elif key == 'update_chung_name':
+		   					self.chung_name.text = d[key]
+
+		   				elif key == 'update_chung_team':
+		   					pass
+
+		   				elif key == 'add_chung_score' or key =='minus_chung_score':
+		   					self.chung_score.text = str(d[key])
+
+		   				elif key == 'add_chung_penalty' or key =='minus_chung_penalty':
+		   					self.chung_penalty.text = str(d[key])
+
+		   				elif key == 'update_hong_name':
+		   					self.hong_name.text = d[key]
+
+		   				elif key == 'add_hong_score' or key == 'minus_hong_score':
+		   					self.hong_score.text = str(d[key])
+
+		   				elif key == 'add_hong_penalty' or key == 'minus_hong_penalty':
+		   					self.hong_penalty.text = str(d[key])
+
+		   				elif key == 'update_time_counter':
+		   					self.time_counter.text = str(d[key])
+
+		   				elif key == 'chung_score':
+		   					self.chung_temp_score.append(d[key])
+
+		   				elif key == 'hong_score':
+		   					self.hong_temp_score.append(d[key])
+
+			client_socket.close()
+
+		except:
+			print('Error connecting to server {0}:{1}'.format(self.server[0], self.server[1]))
+
 
 	def start_socket_connection(self, host, port):
-		print("Starting up socket connection...")
-		self.s = socket.socket()
-		self.s.bind((host, port))
-		self.s.listen(4)
+		pass
+		# self.s = socket.socket()
+		# self.s.bind((host, port))
+		# self.s.listen(4)
+		#
+		# while True:
+		# 	c, addr = self.s.accept()
+		# 	_thread.start_new_thread(self.on_new_client, (c,addr))
+		# c.close()
 
-		while True:
-			c, addr = self.s.accept()
-			_thread.start_new_thread(self.on_new_client, (c,addr))
-		c.close()
-			
 	def on_new_client(self, c, addr):
 		print("New client connected. " + str(addr))
 		while True:
@@ -123,13 +181,13 @@ class ServerRoot(BoxLayout):
 				del self.hong_temp_score[:]
 				counter = 0
 
-class EssServer(App):
+class EssDisplay(App):
 
 	def build(self):
-		self.root = ServerRoot()
+		self.root = DisplayRoot()
 		return self.root
 
 
 if __name__ == '__main__':
 
-	EssServer().run()
+	EssDisplay().run()
