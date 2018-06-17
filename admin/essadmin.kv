@@ -23,7 +23,7 @@
 		height: 40
 		padding_x: 10
 		canvas.before:
-			Color: 
+			Color:
 				rgba: (0.5, 0.5, 0.5, 1)
             Rectangle:
             	pos: self.pos
@@ -34,7 +34,7 @@
 		rows: 1
 		size_hint: (1, None)
 		height: self.minimum_height
-			
+
 		BoxLayout:
 			orientation: 'horizontal'
 			# size_hint: (.666, None)
@@ -94,7 +94,7 @@
 				size_hint: (.2, None)
 				height: 30
 				on_text: root.update_total_round(self)
-			
+
 		# BoxLayout:
 		# 	orientation: 'horizontal'
 		# 	size_hint_y: None
@@ -148,7 +148,7 @@
 				height: 40
 				padding_x: 10
 				canvas.before:
-					Color: 
+					Color:
 						rgba: (0, 0, 1, 1)
 		            Rectangle:
 		            	pos: self.pos
@@ -258,7 +258,7 @@
 				height: 40
 				padding_x: 10
 				canvas.before:
-					Color: 
+					Color:
 						rgba: (1, 0, 0, 1)
 		            Rectangle:
 		            	pos: self.pos
@@ -364,7 +364,7 @@
 		height: 40
 		padding_x: 10
 		canvas.before:
-			Color: 
+			Color:
 				rgba: (0, 1, 0, .8)
             Rectangle:
             	pos: self.pos
@@ -377,20 +377,20 @@
     	BoxLayout:
     		orientation: 'vertical'
 
-    		Label: 
+    		Label:
     			id: time_counter
     			text: '00:00'
     			font_size: '48px'
     			size_hint_y: .4
 
-    		Label: 
+    		Label:
     			id: rest_time_counter
     			text: '00:00'
     			font_size: '36px'
     			size_hint_y: .2
     			color: (1, 1, 0, 1)
 
-    		Label: 
+    		Label:
     			id: round_number
     			text: '1'
     			font_size: '24px'
@@ -451,4 +451,4 @@
 				color: (1, 0, 0, 1)
 			Button:
 				text: 'Connect'
-				on_press: root.connect_to_server()
+				on_press: root.connect_to_display_server()
