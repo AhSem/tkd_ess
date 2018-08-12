@@ -2,8 +2,6 @@
 
 <ClientRoot>
 	action_bar_title: action_bar_title
-	chung_score: chung_score
-	hong_score: hong_score
 
 	orientation: 'vertical'
 	ActionBar:
@@ -22,26 +20,30 @@
 		orientation: 'horizontal'
 		
 		BoxLayout:
-			canvas.before:
-				Color:
-					rgba: (0, 0, 1, 1)
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			Label:
-				id: chung_score
-				font_size: '24px'
+			orientation: 'vertical'
+
+			Button:
+            	text: 'Head'
+            	background_color: 0,2,3,1
+            	on_press: root.score('chung_score',3)
+    
+	        Button:
+	            text: 'Body'
+	            background_color: 0,2,3,1
+	            on_press: root.score('chung_score',2)
 
 		BoxLayout:
-			canvas.before:
-				Color:
-					rgba: (1, 0, 0, 1)
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			Label:
-				id: hong_score
-				font_size: '24px'
+			orientation: 'vertical'
+
+			Button:
+            	text: 'Head'
+            	background_color: 2,0,0,1
+            	on_press: root.score('hong_score',3)
+    
+	        Button:
+	            text: 'Body'
+	            background_color: 2,0,0,1
+	            on_press: root.score('hong_score',2)
 
 
 <SettingPopup>
